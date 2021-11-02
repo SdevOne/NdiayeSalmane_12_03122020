@@ -1,0 +1,3 @@
+[submodule "P9-front-end-dashboard"]
+	path = P9-front-end-dashboard
+	url = https://github.com/SdevOne/P9-front-end-dashboard
