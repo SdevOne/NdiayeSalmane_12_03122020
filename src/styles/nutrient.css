@@ -1,0 +1,40 @@
+.nutrient__container {
+  height: 12.4rem;
+  width: 25.8rem;
+  margin-left: 4rem;
+  border-radius: 0.5rem;
+  background: #fbfbfb;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.2rem 0.4rem 0 #00000005;
+}
+.nutrient__content {
+  height: 6.4rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+}
+.nutrient__intel {
+  margin-left: 2.4rem;
+}
+.nutrient__average {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+}
+.nutrient__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  color: #74798c;
+}
+@media screen and (max-width: 1024px) {
+  .nutrient__container {
+    width: 20rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+  .nutrient__content {
+    margin: auto;
+  }
+}

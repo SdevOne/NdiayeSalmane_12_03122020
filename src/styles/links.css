@@ -1,0 +1,33 @@
+.links {
+  width: 60%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 12rem;
+}
+
+.links__item {
+  height: 30rem;
+  width: 25rem;
+  border-radius: 0.5rem;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.links__item:hover {
+  color: red;
+  transform: scale(0.98);
+}
+
+.links__close {
+  display: none;
+}

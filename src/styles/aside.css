@@ -1,0 +1,22 @@
+.aside {
+  height: 100rem;
+  width: 11.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background: #020203;
+  color: #fff;
+  position: absolute;
+}
+.aside__icon-container {
+  margin-bottom: 17rem;
+}
+.aside__copyright {
+  width: 16rem;
+  margin-bottom: 16rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  transform: rotate(-90deg);
+}

@@ -1,0 +1,46 @@
+.radialBarChart__container {
+  height: 26.3rem;
+  width: 25.8rem;
+  position: relative;
+}
+.radialBarChart__title {
+  position: absolute;
+  top: 2.4rem;
+  left: 3rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.radialBarChart__score-container {
+  height: 16rem;
+  width: 16rem;
+  border-radius: 8.7rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: #fff;
+}
+.radialBarChart__score {
+  width: 9.5rem;
+  margin: auto;
+  text-align: center;
+}
+.radialBarChart__score-percent {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+.radialBarChart__score-txt {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: #282d3055;
+}
+.radialBarChart {
+  background: #fbfbfb;
+}

@@ -1,0 +1,71 @@
+.profil {
+  width: 100%;
+  display: flex;
+  padding-left: 12rem;
+}
+.profil__intel {
+  padding: 7rem 10rem;
+}
+.profil__header {
+  font-size: 4.8rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+.profil__name {
+  color: #ff0000;
+}
+.profil__appreciation {
+  margin-top: 4rem;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.profil__charts-container {
+  height: 60rem;
+  width: 83.5rem;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.profil__charts {
+  width: 83.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.recharts-responsive-container {
+  border-radius: 0.5rem;
+}
+.profil__sportChart {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.profil__nutrients-container {
+  height: 61.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .profil__intel {
+    margin: 5rem auto;
+    padding: 0;
+  }
+  .profil__charts-container {
+    width: 83.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .profil__sportChart {
+    margin-top: 2rem;
+  }
+  .profil__nutrients-container {
+    width: 83.5rem;
+    margin-top: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

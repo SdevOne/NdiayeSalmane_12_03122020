@@ -1,0 +1,37 @@
+.lineChart__container {
+  height: 26.3rem;
+  width: 25.8rem;
+  position: relative;
+  background: #ff0000;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.lineChart {
+  margin-top: 10rem;
+}
+.lineChart__title {
+  width: 14.7rem;
+  font-size: 1.5rem;
+  color: #fff;
+  position: absolute;
+  z-index: 10;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+.lineChart .recharts-layer .recharts-cartesian-axis-tick text {
+  font-size: 1.2rem;
+  fill: #fff;
+}
+.lineChart .recharts-layer .recharts-cartesian-axis-tick text,
+.lineChart__title {
+  font-weight: 500;
+  line-height: 2.4rem;
+  opacity: 0.6;
+}
+.lineChart .recharts-surface {
+  padding: 0 0.5rem;
+}
+
+.lineChart p.recharts-tooltip-label {
+  display: none;
+}

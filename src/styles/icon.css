@@ -1,0 +1,26 @@
+.icon {
+  height: 6.4rem;
+  width: 6.4rem;
+  margin-bottom: 2rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.red-bckg {
+  background: rgba(255, 0, 0, 0.2);
+  margin-bottom: 0;
+}
+.blue-bckg {
+  background: rgba(74, 184, 255, 0.2);
+  margin-bottom: 0;
+}
+.yellow-bckg {
+  background: rgba(249, 206, 35, 0.2);
+  margin-bottom: 0;
+}
+.pink-bckg {
+  background: rgba(253, 81, 129, 0.2);
+  margin-bottom: 0;
+}
