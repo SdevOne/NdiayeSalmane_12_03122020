@@ -22,7 +22,7 @@ This project uses [Yarn](https://yarnpkg.com/) as package manager, requires Node
 
 4 - Launch the API with the command yarn dev
 
-5 - Go back to the project and lauch it with the command yarn start
+5 - Go back to the project and launch it with the command yarn start
 
 6 - Click on the cards links to display the profiles
 
