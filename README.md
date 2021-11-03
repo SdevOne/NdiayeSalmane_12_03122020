@@ -24,8 +24,8 @@ This project uses [Yarn](https://yarnpkg.com/) as package manager, requires Node
 
 5 - Go back to the project and launch it with the command yarn start
 
-6 - Click on the cards links to display the profiles
+6 - Click on the cards to display the profiles
 
 ## Documentation
 
-To see the documentation, launch the command yarn run doc in the terminal
+To see the documentation, open the docs folder and open the index.html file
