@@ -6,10 +6,10 @@ import "../../styles/nutrient.css"
 /**
  * Renders a nutrient component
  * @component
- * @param {string} this.props.logo the icon
- * @param {("red-bckg"|"blue-bckg"|"yellow-bckg"|"pink-bckg")} this.props.background the css class style of the icon
- * @param {string} this.props.count the nutrient value
- * @param {string} this.props.nutrient the nutrient type
+ * @param {string} this.props.logo icon
+ * @param {("red-bckg"|"blue-bckg"|"yellow-bckg"|"pink-bckg")} this.props.background css class style of the icon
+ * @param {string} this.props.count nutrient value
+ * @param {string} this.props.nutrient nutrient type
  */
 class Nutrient extends Component {
   static propTypes = {

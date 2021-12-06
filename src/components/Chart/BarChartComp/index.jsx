@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
+import Fetcher from "../../../api"
 import {
   BarChart,
   Bar,
@@ -9,44 +10,34 @@ import {
   CartesianGrid,
   ResponsiveContainer,
 } from "recharts"
-import { getUserActivity } from "../../../api"
-import "../../../styles/barChart.css"
 import Loader from "../../Loader"
+import "../../../styles/barChart.css"
 
 /**
  * renders a barchart component
  * @component
- * @param {string} this.props.id the user id
+ * @param {string} this.props.id user id
  */
 class BarChartComp extends Component {
   static propTypes = {
     id: PropTypes.string,
   }
-
   state = { data: {}, isLoading: true }
 
   componentDidMount() {
     const id = this.props.id
-    getUserActivity(id).then((result) => {
-      this.setState({ data: result.data })
-      this.setState({ isLoading: false })
+    Fetcher.getUserActivity(id).then((result) => {
+      if (typeof result === "object") {
+        this.setState({ data: result })
+        this.setState({ isLoading: false })
+      } else {
+        this.props.history.push("/Error", { result })
+      }
     })
   }
 
   render() {
     const { data, isLoading } = this.state
-    const activity = !isLoading
-      ? Object.values(data.sessions).map((elt) => {
-          let day = elt.day.split("-")
-          const newData = {
-            day: day[2],
-            kilogram: elt.kilogram,
-            calories: elt.calories,
-          }
-          return newData
-        })
-      : null
-
     return (
       <>
         {!isLoading ? (
@@ -63,7 +54,7 @@ class BarChartComp extends Component {
               </div>
             </div>
             <ResponsiveContainer height={200} className="barChart">
-              <BarChart data={activity} barGap={10}>
+              <BarChart data={data} barGap={10}>
                 <CartesianGrid vertical={false} strokeDasharray="1 2" />
                 <XAxis
                   dataKey="day"

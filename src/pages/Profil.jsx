@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { getUser } from "../api"
+import Fetcher from "../api"
 import BarChartComp from "../components/Chart/BarChartComp"
 import LineChartComp from "../components/Chart/LineChartComp"
 import RadarChartComp from "../components/Chart/RadarChartComp"
@@ -10,6 +10,7 @@ import chicken from "../assets/chicken.svg"
 import apple from "../assets/apple.svg"
 import cheeseburger from "../assets/cheeseburger.svg"
 import "../styles/profil.css"
+import Loader from "../components/Loader"
 
 /**
  * Renders the user profil page
@@ -21,12 +22,12 @@ class Profil extends Component {
   componentDidMount() {
     this._isMounted = true
     const { id } = this.props.match.params
-    getUser(id).then((result) => {
-      if (!result.data) {
-        this.props.history.push("/Error")
-      } else {
-        this.setState({ data: result.data })
+    Fetcher.getUser(id).then((result) => {
+      if (typeof result === "object") {
+        this.setState({ data: result })
         this.setState({ isLoading: false })
+      } else {
+        this.props.history.push("/Error", { result })
       }
     })
   }
@@ -93,7 +94,9 @@ class Profil extends Component {
               </section>
             </div>
           </main>
-        ) : null}
+        ) : (
+          <Loader />
+        )}
       </>
     )
   }

@@ -2,7 +2,11 @@ import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "../../styles/links.css"
 
-export default class Links extends Component {
+/**
+ * renders cards who redirect to profiles
+ * @component
+ */
+class Links extends Component {
   render() {
     let linksClass = "links"
     return (
@@ -17,3 +21,5 @@ export default class Links extends Component {
     )
   }
 }
+
+export default Links

@@ -5,8 +5,8 @@ import "../../styles/icon.css"
 /**
  * renders icon
  * @component
- * @param {("red-bckg"|"blue-bckg"|"yellow-bckg"|"pink-bckg")} [this.props.background] the css class style of the icon
- * @param {string} this.props.logo the icon
+ * @param {("red-bckg"|"blue-bckg"|"yellow-bckg"|"pink-bckg")} [this.props.background] css class style of the icon
+ * @param {string} this.props.logo icon
  */
 class Icon extends Component {
   static propTypes = {

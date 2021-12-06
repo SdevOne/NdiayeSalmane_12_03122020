@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { getUserAverage } from "../../../api"
+import Fetcher from "../../../api"
+// import { getUserAverage } from "../../../api"
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts"
 import "../../../styles/lineChart.css"
 import Loader from "../../Loader"
@@ -8,30 +9,28 @@ import Loader from "../../Loader"
 /**
  * renders a line chart component
  * @component
- * @param {string} this.props.id the user id
+ * @param {string} this.props.id user id
  */
 class LineChartComp extends Component {
   static propTypes = {
     id: PropTypes.string,
   }
-
   state = { data: {}, isLoading: true }
 
   componentDidMount() {
     const id = this.props.id
-    getUserAverage(id).then((result) => {
-      this.setState({ data: result.data })
-      this.setState({ isLoading: false })
+    Fetcher.getUserAverage(id).then((result) => {
+      if (typeof result === "object") {
+        this.setState({ data: result })
+        this.setState({ isLoading: false })
+      } else {
+        this.props.history.push("/Error", { result })
+      }
     })
   }
+
   render() {
     const { data, isLoading } = this.state
-    const average = !isLoading
-      ? Object.values(data.sessions).map((elt) => {
-          return elt
-        })
-      : null
-
     return (
       <>
         {!isLoading ? (
@@ -41,7 +40,7 @@ class LineChartComp extends Component {
               <LineChart
                 cx="50%"
                 cy="50%"
-                data={average}
+                data={data}
                 fill="#fff000"
                 margin={{ top: 1, left: 10, right: 10 }}
               >

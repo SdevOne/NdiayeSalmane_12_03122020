@@ -7,7 +7,7 @@ import Loader from "../../Loader"
 /**
  * renders a radial chart
  * @component
- * @param {number} this.props.score the score achieved in the goal
+ * @param {number} this.props.score score achieved in the goal
  */
 class RadialChartComp extends Component {
   static propTypes = {
