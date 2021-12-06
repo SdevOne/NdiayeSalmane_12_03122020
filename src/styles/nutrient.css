@@ -28,7 +28,7 @@
   line-height: 2.4rem;
   color: #74798c;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1360px) {
   .nutrient__container {
     width: 20rem;
     margin-bottom: 2rem;

@@ -48,8 +48,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
-
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1360px) {
   .profil__intel {
     margin: 5rem auto;
     padding: 0;
